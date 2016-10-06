@@ -15,3 +15,40 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 img {
   max-width: 100%;
 }
+
+// *****START OF FRAMEWORK*****
+.header{
+  background-color: #F5F5F5;
+  height: 49px;
+  overflow: auto;
+  .container-guts{
+    height: 28px;
+    width: 980px;
+    margin-top: 7px;
+  }
+  img{
+    height: 28px;
+    width: 28px;
+  }
+  .search-box{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .input-box{
+    // width: 350px;
+    width:100%;
+  }
+  a{
+    padding: 11px;
+    color: #333333;
+  font-weight: bold;
+  }
+  .fa-plus{
+    font-size: 20px;
+    color: #333333;
+    vertical-align: middle;
+  }
+  .drop-down{
+    float: right;
+  }
+}
