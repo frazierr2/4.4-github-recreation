@@ -35,7 +35,7 @@
         <!-- *****LEFT-SIDE***** -->
         <div class="container">
           <div class="row">
-            <div class="col-md-3 left-side">
+            <div id="left-side" class="col-md-3">
             <!-- *****TEMPLATE FOR LEFT SIDE*****             -->
             </div>
           </div>
@@ -49,18 +49,18 @@
       <!-- *****LEFT-SIDE TEMPLATE***** -->
     <script id="left-section" type="text/x-handlebars-template">
       <div>
-       <img src={{portrait}} alt="">
+       <img src={{avatar_url}} alt="">
        <span>{{name}}</span>
        <span>{{username}}</span>
-       <a href="#">{{blog}}</a>
+       <a href="#">{{bio}}</a>
        <button></button>
        <hr>
        <span>{{location}}</span>
        <a href="#">{{email}}</a>
-       <span>{{date}}</span>
+       <span>{{created_at}}</span>
        <hr>
        <span>{{organization}}</span>
-       <img src={{js-image}} alt="">
+       <img src={{organization_url}} alt="">
        </div>
  </script>
 

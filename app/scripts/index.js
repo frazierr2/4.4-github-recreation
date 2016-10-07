@@ -15,18 +15,27 @@ var url = 'https://api.github.com';
 var userInfo = url + '/users/frazierr2';
 console.log(userInfo);
 
+$.ajax(userInfo).then(userSection);
 
-$.ajax(userInfo).then(userThumnail);
+// **********USER INFO**********
+function userSection(data){
+  var userDetails = data;
+  console.log(userDetails);
+  var source = $('#left-section').html();
+  var template = Handlebars.compile(source);
+  // console.log(source);
+  var $infoContainer = $('#left-side');
+  $infoContainer.append(template(userDetails));
+}
 
-function userThumnail(data){
-  console.log(data.avatar_url);
-  // var planets = data.results;
-  // var $planetContainer = $('#planet-list');
+
+
+  // function getUserInfo(data){
+  // var userInfo = data;
+  // var $profileBar = $('#profile-bar');
+  // console.log(data);
   //
-  // var source = $('#plaent-template').html();
+  // var source = $('#profile-template').html();
   // var template = Handlebars.compile(source);
   //
-  // _.each(planets, function(planet){
-  //   $planetContainer.append(template(planet));
-  // });
-}
+  // $profileBar.append(template(userInfo));
