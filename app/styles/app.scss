@@ -56,3 +56,38 @@ img {
 .middle-section{
   background-color: lightgrey;
 }
+#left-side{
+  img{
+    border-radius: 15px;
+  }
+  .name{
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .username{
+    font-size: 20px;
+    display: block;
+    color: #666666;
+    line-height: 24px;
+  }
+  button{
+    height: 34px;
+    width: 264px;
+  }
+  .email,.location,.blog,.joined{
+    margin: 4px;
+    display: block;
+  }
+  .fa-map-marker, .fa-clock-o, .fa-envelope-o, .fa-link{
+    color: #999999;
+  }
+  hr{
+    background: #E5E5E5;
+    height: 1px;
+  }
+  .org{
+    font-size: 16px;
+    font-weight: 600;
+  }
+}

@@ -50,17 +50,22 @@
     <script id="left-section" type="text/x-handlebars-template">
       <div>
        <img src={{avatar_url}} alt="">
-       <span>{{name}}</span>
-       <span>{{username}}</span>
-       <a href="#">{{bio}}</a>
-       <button></button>
+       <span class="name">{{name}}</span>
+       <span class="username">{{login}}</span>
+       <a class="addBio">Add a bio</a>
+       <button name="button">Edit profile</button>
        <hr>
-       <span>{{location}}</span>
-       <a href="#">{{email}}</a>
-       <span>{{created_at}}</span>
+       <span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>
+{{location}}</span>
+       <a class="email" href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+{{email}}</a>
+       <a class="blog"href="#"><i class="fa fa-link" aria-hidden="true"></i>
+{{blog}}</a>
+       <span class="joined"><i class="fa fa-clock-o" aria-hidden="true"></i>
+Joined on May 2, 2016</span>
        <hr>
-       <span>{{organization}}</span>
-       <img src={{organization_url}} alt="">
+       <span class="org">Organizations</span>
+       <!-- <img src={{organization_url}} alt=""> -->
        </div>
  </script>
 
