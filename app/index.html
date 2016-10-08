@@ -38,6 +38,39 @@
             <div id="left-side" class="col-md-3">
             <!-- *****TEMPLATE FOR LEFT SIDE*****             -->
             </div>
+              <!-- **********NAV-BAR ABOVE REPOS********* -->
+              <nav class="col-md-9 repoBarBorder">
+                <ul class="repoNav">
+                  <li><a href="#">Overview</a></li>
+                  <li class="re"><a href="#">Repositories</a></li>
+                  <li><a href="#">Stars</a></li>
+                  <li><a href="#">Followers</a></li>
+                  <li><a href="#">Following</a></li>
+                </ul>
+              </nav>
+
+
+              <form>
+                <div class="form-group col-md-9">
+                  <input type="text" class="form-control searchRepo" id="formGroupExampleInput" placeholder="Search repositories">
+                <button type="button" class="btn btn-default dropdown-toggle butts " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Type: <strong>All</strong><span class="caret"></span>
+                </button>
+                <button type="button" class="btn btn-default dropdown-toggle butts" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Language:<strong>All</strong> <span class="caret"></span>
+                </button>
+                <button type="button" class="btn btn-default dropdown-toggle newButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">New
+                   <span class="caret"></span>
+                </button>
+                </div>
+              </form>
+
+
+              <div id="right-side" class="col-md-9">
+
+                <!-- *****TEMPLATE FOR RIGHT SIDE***** -->
+              </div>
+
           </div>
         </div>
 
@@ -67,6 +100,19 @@ Joined on May 2, 2016</span>
        <span class="org">Organizations</span>
        <!-- <img src={{organization_url}} alt=""> -->
        </div>
+ </script>
+    <!-- ***********TEMPLATE FOR RIGHT SIDE********** -->
+    <script id="right-section" type="text/x-handlebars-template">
+      <div class="gitBox">
+       <h3 class="gitName">
+         <a href={{html_url}}>{{name}}</a>
+       </h3>
+       <h3 class="langName">
+         <span>{{language}}</span>
+         <a href={{stargazers_count}}><i class="fa fa-star" aria-hidden="true"></i>
+{{stargazers_count}}</a>
+       </h3>
+      </div>
  </script>
 
 
