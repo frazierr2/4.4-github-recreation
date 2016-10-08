@@ -52,6 +52,19 @@ _.each(sortedArray,function(info){
   });
 }
 
-// **************************STARGAZER SECTION-REPO******************************
-var stargazer = url + '/users/frazierr2/starred';
-console.log(stargazer);
+// **************************ORGANIZATION******************************
+var orgAvatar = url + '/users/frazierr2/orgs';
+console.log(orgAvatar);
+
+$.ajax(orgAvatar).then(getOrgImg);
+function getOrgImg(data) {
+  var orgPic = data;
+  var source = $('#av-section').html();
+  var template = Handlebars.compile(source);
+  // console.log(source);
+  var $infoContainer = $('#av-img');
+
+  _.each(orgPic, function(pic){
+      $infoContainer.append(template(pic));
+    });
+}
