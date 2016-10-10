@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>4 4 github recreation</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="screen" title="no title">
+  </head>
+  <body>
+
+    <!-- *****HEADER***** -->
+    <div class="header">
+      <div class="container container-guts">
+        <img class="logo" src="images/GitHub-Mark-64px.png" alt="">
+        <div class="row search-box">
+        <div class="col-xs-4 input-box">
+          <input type="text" class="form-control" placeholder="Search GitHub">
+        </div>
+        </div>
+            <a href="#">Pull request</a>
+            <a href="#">Issues</a>
+            <a href="#">Gist</a>
+        <div class="drop-down">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+            <img src="images/me.png" alt="">
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- **********MIDDLE SECTION********* -->
+    <div class="middle-section">
+        <!-- *****LEFT-SIDE***** -->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+            <div id="left-side">
+            <!-- *****TEMPLATE FOR LEFT SIDE***** -->
+            </div>
+            <div class="col-md-3 avatar">
+            <p id="av-img">
+            </p>
+            </div>
+
+
+          </div>
+              <!-- **********NAV-BAR ABOVE REPOS********* -->
+              <nav class="col-md-9 repoBarBorder">
+                <ul class="repoNav">
+                  <li><a href="#">Overview</a></li>
+                  <li class="re"><a href="#">Repositories</a></li>
+                  <li><a href="#">Stars</a></li>
+                  <li><a href="#">Followers</a></li>
+                  <li><a href="#">Following</a></li>
+                </ul>
+              </nav>
+
+
+              <form>
+                <div class="form-group col-md-9">
+                  <input type="text" class="form-control searchRepo" id="formGroupExampleInput" placeholder="Search repositories">
+                <button type="button" class="btn btn-default dropdown-toggle butts " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Type: <strong>All</strong><span class="caret"></span>
+                </button>
+                <button type="button" class="btn btn-default dropdown-toggle butts" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Language:<strong>All</strong> <span class="caret"></span>
+                </button>
+                <button type="button" class="btn btn-default dropdown-toggle newButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">New
+                   <span class="caret"></span>
+                </button>
+                </div>
+              </form>
+
+
+              <div id="right-side" class="col-md-9">
+
+                <!-- *****TEMPLATE FOR RIGHT SIDE***** -->
+              </div>
+
+          </div>
+        </div>
+
+
+
+
+
+    </div>
+      <!-- *****LEFT-SIDE TEMPLATE***** -->
+    <script id="left-section" type="text/x-handlebars-template">
+      <div>
+       <img src={{avatar_url}} alt="">
+       <span class="name">{{name}}</span>
+       <span class="username">{{login}}</span>
+       <a class="addBio">Add a bio</a>
+       <button name="button">Edit profile</button>
+       <hr>
+       <span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>
+{{location}}</span>
+       <a class="email" href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+{{email}}</a>
+       <a class="blog"href="#"><i class="fa fa-link" aria-hidden="true"></i>
+{{blog}}</a>
+       <span class="joined"><i class="fa fa-clock-o" aria-hidden="true"></i>
+Joined on May 2, 2016</span>
+       <hr>
+       <span class="org">Organizations</span>
+       </div>
+ </script>
+    <!-- ***********TEMPLATE FOR RIGHT SIDE********** -->
+    <script id="right-section" type="text/x-handlebars-template">
+      <div class="gitBox">
+       <h3 class="gitName">
+         <a href={{html_url}}>{{name}}</a>
+       </h3>
+       <h3 class="langName">
+         <span>{{language}}</span>
+         <a href={{stargazers_count}}><i class="fa fa-star" aria-hidden="true"></i>
+{{stargazers_count}}</a>
+       </h3>
+      </div>
+ </script>
+
+<!-- ************************ORGANIZATION AVATAR**************************** -->
+  <script id="av-section" type="text/x-handlebars-template">
+    <div>
+     <img src={{avatar_url}} alt="">
+    </div>
+  </script>
+
+
+    <script src="js/bundle.js"></script>
+  </body>
+</html>
