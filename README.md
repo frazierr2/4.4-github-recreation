@@ -1,4 +1,4 @@
-# 4.4 Etsy Recreation
+# 4.4 GitHub Recreation
 
 This project we were tasked with using Asynchronous JavaScript and AJAX calls and promises. I used GitHub's API and made a recreation of my GitHub Repo page.
 
